@@ -2,12 +2,12 @@
 <html lang="en">
 <!-- Kirsten Kurniadi, ID: 30045816
 Assessment Task Two (Individual Project)
-Web Page Content, Question 1 -->
+Web Page Content, Question 2 -->
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Question 1 | Assessment Two</title>
+    <title>Question 2 | Assessment Two</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -16,7 +16,7 @@ Web Page Content, Question 1 -->
 <body>
     <?php include_once('../inc_nav.php'); ?>
     <div class="container mx-3 my-3">
-        <h1>Question One</h1>
+        <h1>Question Two</h1>
 		<hr>
 		<?php 
             session_start();
@@ -47,7 +47,7 @@ Web Page Content, Question 1 -->
 					$database = new Connection();
 					$db = $database->open();
 					try{	
-						$sql = 'SELECT * FROM content WHERE id = 1';
+						$sql = 'SELECT * FROM content WHERE id = 2';
 						foreach ($db->query($sql) as $row) {
 							?>
 							<tr>
