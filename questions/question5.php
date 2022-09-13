@@ -14,7 +14,7 @@ Web Page Content, Question 5 -->
 </head>
 
 <body>
-    <?php include_once('../inc_nav.php'); ?>
+    <?php include_once('questions_nav.php'); ?>
     <div class="container mx-3 my-3">
         <h1>Question Five</h1>
 		<hr>
