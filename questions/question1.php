@@ -47,7 +47,7 @@ Web Page Content, Question 1 -->
 					$database = new Connection();
 					$db = $database->open();
 					try{	
-						$sql = 'SELECT * FROM content WHERE id = 1';
+						$sql = 'SELECT * FROM questions WHERE id = 1';
 						foreach ($db->query($sql) as $row) {
 							?>
 							<tr>
