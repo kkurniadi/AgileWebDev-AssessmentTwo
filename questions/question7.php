@@ -52,9 +52,9 @@ Web Page Content, Question 7 -->
 							?>
 							<tr>
 								<td><?php echo $row['id']; ?></td>
-								<td><?php echo nl2br($row['question']); ?></td>
-								<td><?php echo nl2br($row['description']); ?></td>
-								<td><?php echo nl2br($row['answer']); ?></td>
+								<td><?php echo $row['question']; ?></td>
+								<td><?php echo $row['description']; ?></td>
+								<td><?php echo $row['answer']; ?></td>
 							</tr>
 							<?php 
 						}
