@@ -30,45 +30,47 @@ Web Page Content, Question 9 -->
                 unset($_SESSION['message']);
             }
         ?>
-		<table class="table" style="margin-top:20px;">
-			<thead>
-				<tr>
-					<th scope="col">ID</th>
-					<th scope="col">Question</th>
-					<th scope="col">Description</th>
-					<th scope="col">Answer</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					//include our connection
-					include_once('../connection.php');
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Question</th>
+						<th scope="col">Description</th>
+						<th scope="col">Answer</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						//include our connection
+						include_once('../connection.php');
 
-					$database = new Connection();
-					$db = $database->open();
-					try{	
-						$sql = 'SELECT * FROM questions WHERE id = 9';
-						foreach ($db->query($sql) as $row) {
-							?>
-							<tr>
-								<td><?php echo $row['id']; ?></td>
-								<td><?php echo $row['question']; ?></td>
-								<td><?php echo $row['description']; ?></td>
-								<td><?php echo $row['answer']; ?></td>
-							</tr>
-							<?php 
+						$database = new Connection();
+						$db = $database->open();
+						try{	
+							$sql = 'SELECT * FROM questions WHERE id = 9';
+							foreach ($db->query($sql) as $row) {
+								?>
+								<tr>
+									<td><?php echo $row['id']; ?></td>
+									<td><?php echo $row['question']; ?></td>
+									<td><?php echo $row['description']; ?></td>
+									<td><?php echo $row['answer']; ?></td>
+								</tr>
+								<?php 
+							}
 						}
-					}
-					catch(PDOException $e){
-						echo "There is some problem in connection: " . $e->getMessage();
-					}
+						catch(PDOException $e){
+							echo "There is some problem in connection: " . $e->getMessage();
+						}
 
-					//close connection
-					$database->close();
+						//close connection
+						$database->close();
 
-				?>
-			</tbody>
-		</table>
+					?>
+				</tbody>
+			</table>
+		</div>
     </div>
     
     <!-- JavaScript Bundle with Popper -->
